@@ -1,3 +1,15 @@
 {{outlet}}
-<H1>This is Task Page</H1>
+
+<h2>Tasks</h2>
+
+{{#each model as |task|}}
+
+<div class="well">
+    <h4>{{task.Name}}</h4>
+    <h4>{{#link-to 'tasks.edit' task.id}} {{task.email}} {{/link-to}}</h4>
+    <p>{{task.description}}</p>
+    <button class="btn btn-danger" {{action 'deleteEmployee' task.id}}>Delete</button>
+
+</div>
+{{/each}}
 
