@@ -6,9 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('tasks', function() {
+  this.resource('users', function() {
     this.route('new');
-    this.route('edit',{path:'/edit/:task_id'});
+    this.route('edit',{path:'/edit/:user_id'});
   });
 });
 

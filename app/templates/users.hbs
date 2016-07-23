@@ -1,0 +1,16 @@
+{{outlet}}
+
+<h2>Users List</h2>
+
+{{#each model as |user|}}
+
+<div class="well">
+    <h4>{{user.Name}}</h4>
+    <h4>{{#link-to 'users.edit' user.id}} {{user.email}} {{/link-to}}</h4>
+    <p>{{user.description}}</p>
+    <button class="btn btn-danger" {{action 'deleteUser' user.id}}>Delete</button>
+    <button class="btn btn-info" {{action 'editUser' user.id}}>Edit</button>
+
+</div>
+{{/each}}
+
